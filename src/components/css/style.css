@@ -23,6 +23,7 @@ body{
 }
 .startScreen img{
     width: 172px;
+
     margin: 50px;
 }
 .button{
@@ -50,6 +51,7 @@ body{
 }
 .optionsCards .cardSection{
     height: 250px;
+    
     overflow-y: scroll;
 }
 .startScreen .optionsCards input{

@@ -4,7 +4,7 @@ export default function ButtonCard(props){
     function SelectedCards(){
         if(goal !== ""){
             if(goal>flashcard.questions.length){
-                alert("Meta invalida!");
+                alert("Meta invalida! O valor da meta é maior que o número de cards!");
             } else{
                 setDeckSelected(flashcard.title);
                 setCurrentScreen("FlashCardScreen");

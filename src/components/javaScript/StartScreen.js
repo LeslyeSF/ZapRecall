@@ -20,7 +20,7 @@ export default function StartScreen(props){
             <div className="optionsCards">
                 <input type="number" min="1" max="10" step="1" placeholder="Sua meta de zaps" value={goal} onChange={event => setGoal(event.target.value)}/>
                 <div class="cardSection">
-                {insertFlashCards}
+                    {insertFlashCards}
                 </div>
             </div>
         </div>

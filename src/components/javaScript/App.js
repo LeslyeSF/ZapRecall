@@ -37,11 +37,11 @@ let deckFlashCards = [
     "Rênio", "Arsênio"]
     },
     {
-        title:"Tabela Periódica",
-        questions:["H", "Be", "Co", "K", "Cs", "W", "Re", "As"],
-        answers:["Hidrogênio", "Berílio", "Cobalto", "Potássio", "Césio", "Tungstênio", 
-        "Rênio", "Arsênio"]
-        }
+    title:"Tabela Periódica 2",
+    questions:["H", "Be", "Co", "K", "Cs", "W", "Re", "As"],
+    answers:["Hidrogênio", "Berílio", "Cobalto", "Potássio", "Césio", "Tungstênio", 
+    "Rênio", "Arsênio"]
+    }
     
 ];
 

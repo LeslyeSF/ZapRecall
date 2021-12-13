@@ -11,16 +11,26 @@ export default function Result(props){
         setGoal,
         countZap,
         setCountZap ] = props.children;
+
     let result="success", messenger="";
+
     if(goal ===""){
+
         if(countErro >=1){
             result="fail";
+            messenger=<p>{"Você esqueceu " +countErro+ " flashcards..."}</p>;
+        } else{
+            messenger=<p>Você não esqueceu de nenhum flashcard!</p>;
         }
+
     }else{
+
         if(parseInt(goal) > countZap ){
             result="fail";    
-        } 
-        messenger=<p>Sua meta era {goal} Zap e você conseguiu {countZap} Zap!</p>;
+            messenger=<p>{"Você não bateu a meta de Zaps! Seu resultado foi "+countZap+"/"+goal+" zaps!"}</p>;
+        } else{
+            messenger=<p>{"Você bateu a meta de Zaps! Seu resultado foi "+countZap+"/"+goal+" zaps!"}</p>;
+        }
     }
     
 
@@ -31,7 +41,6 @@ export default function Result(props){
                     PARABÉNS! 
                     <img src={party}/> 
                 </p>
-                <p>Você não esqueceu de nenhum flashcard!</p>
                 {messenger}
                 <ButtonRestart>
                     {setCountErro}
@@ -48,7 +57,6 @@ export default function Result(props){
                     Putz.. 
                     <img src={sad}/> 
                 </p>
-                <p>{"Você esqueceu " +countErro+ " flashcards..."}</p>
                 {messenger}
                 <p>Não desanime! Na próxima você consegue!</p>
                 <ButtonRestart>
