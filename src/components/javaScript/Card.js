@@ -44,13 +44,13 @@ export default function Card(props){
     }
     return(
         <div className="card">
-            <div class={"frontCard "+position}>
-                <p class="numberCard">{numberCard}/{flashCards.questions.length}</p>
+            <div class={"frontCard "+position} data-identifier="flashcard">
+                <p class="numberCard" data-identifier="counter">{numberCard}/{flashCards.questions.length}</p>
                 <p class="title">{flashCards.questions[numberCard -1]}</p>
-                <img src={turn} onClick={()=> setPositionCard("back")}/>
+                <img src={turn} onClick={()=> setPositionCard("back")} data-identifier="arrow"/>
             </div>
-            <div class={"backCard "+statusCard}>
-                <p class="numberCard">{numberCard}/{flashCards.questions.length}</p>
+            <div class={"backCard "+statusCard} data-identifier="flashcard">
+                <p class="numberCard" data-identifier="counter">{numberCard}/{flashCards.questions.length}</p>
                 <p class="title">{flashCards.questions[numberCard-1]}</p>
                 <p class="answer">{flashCards.answers[numberCard-1]}</p>
                 <div class={"options "+statusOptions}>
@@ -59,7 +59,7 @@ export default function Card(props){
                     <div class="green" onClick={()=> setStatusCard("green")}>Lembrei com esforço</div>
                     <div class="yellow" onClick={Correct}>Zap!</div>
                 </div>
-                <img src={turn} className={statusTurn} onClick={NextCard}/>
+                <img src={turn} className={statusTurn} onClick={NextCard} data-identifier="arrow"/>
             </div>
         </div>
     );

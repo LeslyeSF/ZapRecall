@@ -18,8 +18,10 @@ export default function StartScreen(props){
         <div className="startScreen" >
             <img src={logo} alt="Logo ZapRecall"/>
             <div className="optionsCards">
-                <input type="number" min="1" max="8" step="1" placeholder="Sua meta de zaps" value={goal} onChange={event => setGoal(event.target.value)}/>
+                <input type="number" min="1" max="10" step="1" placeholder="Sua meta de zaps" value={goal} onChange={event => setGoal(event.target.value)}/>
+                <div class="cardSection">
                 {insertFlashCards}
+                </div>
             </div>
         </div>
     );

@@ -11,15 +11,16 @@ export default function Result(props){
         setGoal,
         countZap,
         setCountZap ] = props.children;
-    let result="success";
+    let result="success", messenger="";
     if(goal ===""){
         if(countErro >=1){
             result="fail";
         }
     }else{
         if(parseInt(goal) > countZap ){
-            result="fail";
-        }
+            result="fail";    
+        } 
+        messenger=<p>Sua meta era {goal} Zap e você conseguiu {countZap} Zap!</p>;
     }
     
 
@@ -31,6 +32,7 @@ export default function Result(props){
                     <img src={party}/> 
                 </p>
                 <p>Você não esqueceu de nenhum flashcard!</p>
+                {messenger}
                 <ButtonRestart>
                     {setCountErro}
                     {setCurrentScreen}
@@ -43,10 +45,11 @@ export default function Result(props){
         return(
             <div class="fail">
                 <p class="title">
-                    Putz... 
+                    Putz.. 
                     <img src={sad}/> 
                 </p>
                 <p>{"Você esqueceu " +countErro+ " flashcards..."}</p>
+                {messenger}
                 <p>Não desanime! Na próxima você consegue!</p>
                 <ButtonRestart>
                     {setCountErro}

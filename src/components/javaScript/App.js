@@ -8,7 +8,9 @@ import StartScreen from "./StartScreen";
 let deckFlashCards = [
     {
     title: "React",
-    questions:["O que é JSX?", "O React é __ ", "Componentes devem iniciar com __ "],
+    questions:["O que é JSX?", "O React é __ ", "Componentes devem iniciar com __ ", 
+    "Podemos colocar __ dentro do JSX ", "O ReactDOM nos ajuda __ ", "Usamos o npm para __ ", 
+    "Usamos props para __ ", "Usamos estado (state) para __ "],
     answers:["Uma extensão de linguagem do JavaScript", 
     "uma biblioteca JavaScript para construção de interfaces", "letra maiúscula", 
     "expressões", "interagindo com a DOM para colocar componentes React na mesma", 
@@ -27,8 +29,20 @@ let deckFlashCards = [
     "gerenciar os pacotes necessários e suas dependências", 
     "passar diferentes informações para componentes", 
     "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"]
-    }
-
+    },
+    {
+    title:"Tabela Periódica",
+    questions:["H", "Be", "Co", "K", "Cs", "W", "Re", "As"],
+    answers:["Hidrogênio", "Berílio", "Cobalto", "Potássio", "Césio", "Tungstênio", 
+    "Rênio", "Arsênio"]
+    },
+    {
+        title:"Tabela Periódica",
+        questions:["H", "Be", "Co", "K", "Cs", "W", "Re", "As"],
+        answers:["Hidrogênio", "Berílio", "Cobalto", "Potássio", "Césio", "Tungstênio", 
+        "Rênio", "Arsênio"]
+        }
+    
 ];
 
 export default function App(){

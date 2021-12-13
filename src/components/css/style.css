@@ -23,10 +23,11 @@ body{
 }
 .startScreen img{
     width: 172px;
+    margin: 50px;
 }
 .button{
     width: 345px;
-    height: 72px;
+    min-height: 72px;
 
     margin: 10px 0px 10px 0px;
 
@@ -41,9 +42,19 @@ body{
     font-weight: 700;
     font-size: 20px;
 }
+.button p{
+    max-width: 250px;
+}
+.optionsCards{
+    height: 300px;
+}
+.optionsCards .cardSection{
+    height: 250px;
+    overflow-y: scroll;
+}
 .startScreen .optionsCards input{
     width: 345px;
-    height: 49px;
+    height: 50px;
 
     padding: 20px;
 
